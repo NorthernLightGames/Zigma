@@ -1,0 +1,10 @@
+name: Zigma
+main: io.github.northernlightgames.zigma.Zigma
+version: 0.0.1-SNAPSHOT
+author: Valdemar Melin
+commands:
+   test:
+      description: This is a test command.
+      usage: /test
+      permission: Zigma.basic
+      permission-message: Sorry, you don't have permission to that command :(
