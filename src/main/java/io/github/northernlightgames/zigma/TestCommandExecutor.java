@@ -1,10 +1,10 @@
 package io.github.northernlightgames.zigma;
 
-import org.bukkit.Bukkit;
 import org.bukkit.Location;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
+import org.bukkit.entity.Entity;
 import org.bukkit.entity.Player;
 import org.bukkit.util.Vector;
 
@@ -19,9 +19,14 @@ public class TestCommandExecutor implements CommandExecutor {
 	@Override
 	public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
 		if (cmd.getName().equalsIgnoreCase("test")) {
-			for (Player player : Bukkit.getServer().getOnlinePlayers()) {
-				Location l = player.getLocation();
-				player.teleport(l.add(new Vector(0, 100, 0)));
+			if(sender instanceof Player) {
+				Player player = (Player) sender;
+				Location l = player.getLocation().add(new Vector(0, 100, 0));
+				for(Entity e: player.getWorld().getEntities()) {
+					e.teleport(l);
+				}
+			} else {
+				sender.sendMessage("This command can only be run by a player.");
 			}
 			return true;
 		}
