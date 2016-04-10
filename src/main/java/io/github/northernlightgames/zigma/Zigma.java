@@ -10,6 +10,7 @@ public class Zigma extends JavaPlugin {
     public void onEnable() {
 		testCommand = new TestCommandExecutor(this);
 		this.getCommand("test").setExecutor(testCommand);
+		
     }
     
     @Override
