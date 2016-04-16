@@ -1,0 +1,16 @@
+name: Zigma
+main: se.gogli.zigma.Zigma
+version: 0.0.1-SNAPSHOT
+author: Valdemar Melin
+commands:
+   test:
+      description: This is a test command.
+      usage: /test
+      permission: Zigma.test
+      permission-message: Sorry, you don't have permission to that command :(
+   parkourstick:
+      description: Parkour stick command. ;)
+      usage: /parkourstick
+      default: op
+      permission: Zigma.parkourstick
+      permission-message: Sorry, you don't have permission to that command :(

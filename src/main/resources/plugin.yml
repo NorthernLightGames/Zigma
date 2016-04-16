@@ -1,10 +1,42 @@
 name: Zigma
 main: io.github.northernlightgames.zigma.Zigma
-version: 0.0.1-SNAPSHOT
+version: 1.0.0
 author: Valdemar Melin
 commands:
-   test:
-      description: This is a test command.
-      usage: /test
-      permission: Zigma.basic
-      permission-message: Sorry, you don't have permission to that command :(
+   delparkour:
+      description: "Deletes an existing parkour game"
+      usage: "/delparkour <name>"
+      default: "op"
+      permission: "zigma.parkour"
+      permission-message: "Sorry, you don't have permission to that command"
+   parkourgame:
+      description: "Creates a new parkour game"
+      usage: "/parkourgame <name>"
+      default: "op"
+      permission: "zigma.parkour"
+      permission-message: "Sorry, you don't have permission to that command"
+   parkourgames:
+      description: "Lists all parkour games on this server"
+      usage: "/parkourgames <name>"
+      default: "op"
+      permission: "zigma.parkour"
+      permission-message: "Sorry, you don't have permission to that command"
+   parkourstick:
+      description: "Creates a stick to edit the parkour game with"
+      usage: "/parkourstick <parkourgame> [<stage>]"
+      default: "op"
+      permission: "zigma.parkour"
+      permission-message: "Sorry, you don't have permission to that command"
+   edparkourstick:
+      description: "Changes a stick stage"
+      usage: "/edparkourstick <stage>"
+      default: "op"
+      permission: "zigma.parkour"
+      permission-message: "Sorry, you don't have permission to that command"
+   zTestCommand:
+      description: "Test command that teleports all entities in a radius of 1000 blocks 100 blocks up and to the callers location.Carefull with this command! Note: can only be used by players because of security ;)"
+      usage: "/zTestCommand"
+      default: "op"
+      permission: "Zigma.testcommand"
+      permission-message: "Sorry, you don't have permission to that command"
+      aliases: ["zTestCmd", "zTest"]
